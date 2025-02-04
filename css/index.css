@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: beige;
   margin: 0;
@@ -61,18 +65,41 @@ footer a {
 }
 
 .partners-list ~ p {
-  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 32px;
   text-align: center;
   color: mediumaquamarine;
 }
 
 ul + p {
-  max-width: 300px;
+  max-width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
   padding-left: 30px;
 
+  margin: 2rem auto;
+
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
   color: mediumaquamarine;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ul + p:hover {
+  transform: translateY(5px);
+  background-color: #4c4c4c;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+
+  font-size: 30px;
+  color: green;
 }
 
 tr > th {
@@ -224,15 +251,61 @@ table {
 }
 
 .book {
-  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 30px;
+  background-color: #404bbf;
+  border-radius: 8px;
+  margin: 1rem;
+
+  color: #fff;
+}
+
+.plans-item {
+  max-width: 200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.plans-par {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: gray;
+}
+
+.plans-par::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 100%;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
 }
 
 .partners-list {
-  max-width: 400px;
+  max-width: 600px;
+  height: 300px;
 
   background-color: azure;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  border-radius: 8px;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+
+  margin: 0 auto;
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .partners-title {
@@ -240,4 +313,108 @@ table {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 3rem;
   text-align: center;
+}
+
+.partner-link {
+  display: block;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  margin-bottom: 20px;
+}
+
+.partner-link:link {
+  color: magenta;
+}
+
+.partner-link:visited {
+  color: mediumaquamarine;
+}
+
+.partner-link:hover {
+  color: firebrick;
+}
+
+.partner-link:active {
+  color: sandybrown;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+dt {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+
+dl dt:first-child {
+  color: orange;
+}
+
+.dl-list {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+dt::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 100%;
+  background: #404bbf;
+}
+
+dd::before {
+  content: "→";
+  padding-right: 5px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.positioned {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: lightblue;
+  padding: 10px;
+  border: 2px solid blue;
+}
+
+.float-box {
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  float: left;
+  background-color: lightgreen;
+  border: 2px solid green;
+  text-align: center;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
 }
