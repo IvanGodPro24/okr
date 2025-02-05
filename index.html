@@ -16,7 +16,7 @@
     <main>
       <section class="hero">
         <div>
-          <h1 class="title main-title">This is coworking page!</h1>
+          <h1 class="title main-title" id="title">This is coworking page!</h1>
           <p style="color: white" class="hero-par">
             Premium, flexible workspaces with a full range of operational
             services and unique community
@@ -40,5 +40,33 @@
         </svg>
       </a>
     </footer>
+
+    <!-- <script>
+      setTimeout(() => {
+        location.href = "https://google.com";
+      }, 3000);
+    </script> -->
+
+    <script>
+      const title = document.getElementById("title");
+
+      title.textContent = "New title";
+    </script>
+
+    <!-- <script>
+      alert("Ласкаво просимо на сайт!");
+
+      let userName = prompt("Як вас звати?", "Dan");
+
+      let isReady = confirm("Ви готові почати?");
+
+      if (isReady) {
+        alert(`Чудово, ${userName}! Розпочинаємо.`);
+      } else {
+        alert("Добре, поверніться коли будете готові.");
+      }
+    </script> -->
+
+    <!-- <script src="./js/developer.js"></script> -->
   </body>
 </html>

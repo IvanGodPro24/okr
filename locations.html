@@ -42,10 +42,51 @@
         <a
           href="https://uk.wikipedia.org/wiki/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2"
           target="_blank"
-          class="link"
+          class="link dom"
           >Lviv</a
         >
       </li>
     </ul>
+
+    <div id="parent"></div>
+
+    <p id="removeMe">Text to remove</p>
+
+    <script>
+      // const links = document.querySelectorAll(".link");
+
+      // const dom = document.querySelector(".dom");
+
+      // // console.log(links);
+
+      // links.forEach((link) => (link.style.color = "beige"));
+
+      // dom.innerHTML = "<b>Жирний текст</b>";
+
+      // dom.outerHTML = "<h2>Новий заголовок</h2>";
+
+      // dom.textContent = "Цей текст буде без тегів";
+
+      document.write("<h1>HTML</h1>");
+
+      let newDiv = document.createElement("h2");
+      let textNode = document.createTextNode("CSS");
+      newDiv.appendChild(textNode);
+      document.body.appendChild(newDiv);
+
+      let parent = document.getElementById("parent");
+      let newP = document.createElement("p");
+      newP.textContent = "Paragraph";
+
+      parent.prepend(newP);
+      parent.after(newP);
+      parent.replaceWith(newP);
+
+      const remove = document.getElementById("removeMe");
+
+      remove.remove();
+    </script>
+
+    <!-- <script src="./js/compareStrings.js"></script> -->
   </body>
 </html>
