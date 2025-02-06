@@ -418,3 +418,18 @@ dd::before {
   background-color: yellow;
   font-weight: bold;
 }
+
+.plans-item {
+  cursor: pointer;
+}
+
+.light {
+  box-shadow: inset 0 0 75px yellow;
+}
+
+#menu {
+  display: flex;
+  gap: 30px;
+
+  margin: 2rem;
+}

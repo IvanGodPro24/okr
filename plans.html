@@ -15,7 +15,7 @@
       <font face="Arial" size="5" color="black"><b>Our plans</b></font>
     </p>
 
-    <ul>
+    <ul id="plans-list">
       <li class="plans-item">
         <p class="plans-par">
           <i>One day access</i>
@@ -32,6 +32,22 @@
         </p>
       </li>
     </ul>
+
+    <button onclick="handleClick()">Click</button>
+
+    <button id="btn">Click one more</button>
+
+    <button id="btn2">Click to see numbers</button>
+
+    <button id="btn3">Click object</button>
+
+    <button id="btn4">Remove</button>
+
+    <div id="menu">
+      <button data-action="sayHello">Hello</button>
+      <button data-action="sayBye">Goodbye</button>
+      <button data-action="showTime">Show time</button>
+    </div>
 
     <p id="book">
       Book your outstanding event at Creative States. Charge your event with the
@@ -171,5 +187,74 @@
         document.body.style.backgroundColor = "beige";
       }, 30000);
     </script> -->
+
+    <!-- 
+    <script>
+      function handleClick() {
+        alert("Click");
+      }
+    </script> -->
+
+    <script>
+      const click = document.getElementById("btn");
+
+      click.onclick = () => alert("Click one more");
+    </script>
+
+    <script>
+      let btn = document.getElementById("btn2");
+
+      const handler1 = () => console.log("1");
+
+      const handler2 = () => console.log("2");
+
+      btn.addEventListener("click", handler1);
+      btn.addEventListener("click", handler2);
+    </script>
+
+    <script>
+      let btn3 = document.getElementById("btn3");
+
+      let handlerObj = {
+        handleEvent(event) {
+          alert(`Handler via object! Element: ${event.currentTarget.tagName}`);
+        },
+      };
+
+      btn3.addEventListener("click", handlerObj);
+    </script>
+
+    <script>
+      let btn4 = document.getElementById("btn4");
+
+      const hello = () => alert("Hello!");
+
+      btn4.addEventListener("click", hello);
+
+      // setTimeout(() => {
+      //   btn4.removeEventListener("click", hello);
+      //   alert("Обробник видалено!");
+      // }, 5000);
+    </script>
+
+    <script>
+      const menu = document.getElementById("menu");
+
+      menu.addEventListener("click", setMenu);
+
+      function setMenu(e) {
+        let action = e.target.dataset.action;
+
+        let actions = {
+          sayHello: () => alert("Привіт!"),
+          sayBye: () => alert("До побачення!"),
+          showTime: () => alert(new Date().toLocaleTimeString()),
+        };
+
+        if (actions[action]) actions[action]();
+      }
+    </script>
+
+    <script src="./js/plans-item-light.js"></script>
   </body>
 </html>
